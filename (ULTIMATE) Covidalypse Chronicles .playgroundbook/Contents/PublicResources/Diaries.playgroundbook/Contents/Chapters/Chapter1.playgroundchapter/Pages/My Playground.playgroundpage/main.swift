@@ -1,0 +1,62 @@
+
+
+import UIKit
+import PlaygroundSupport
+
+class MyViewController : UIViewController {
+    
+    var label = UILabel()
+    var button = UIButton()
+    var numberOfScreen:Int = 0
+    
+    var vectorText:[String] = ["Diaries of the Apocalypse (Covidalypse), day 1:\n\n Hello! This is my World. Step lightly, or be devoured.\n\nhaha... just kidding. \n\nNote to self: Is it too crazy to start talking to my diary day 1, or just average crazy...? \n(later check with Gog, the Shaman, through the luminous artifact)\n\nDiary, after all these months I feel to have regressed to my primitive pre-civilizatory state of mind. My terapeut suggested I should incarnate this state and be at peace with it, so I dressed up accordingly and tried to reach a higher state of conscience... \n\n *omowmomwomwo* \n\n Nope. Nothing. Oh, that was my stomach you heard. All this effort just made me discover I'm so hungry I could eat an human arm... or maybe a leg.  Sometimes I feel lucky I live alone. Or perhaps whoever doesnt live with me is the lucky one, in which case should be everyone else, leaving me thus the only unlucky dude. Welcome to my life. It's sad. \n\nLet's check what the hell still survived in my fridger after the weekend in this post-apocalyptic cave of mine... you know what they say, if it doesn't kill you, it makes you stronger, right..?! ....right?", "\n\n\nOh. Nonononono. \n\nPete7, my man, my bro, how did your little fish tank end up inside my fridge? \n\nDamn, guess I was more messsed up yesterday than I remember...\n\n My bad, little one. Now I gotta eat your body to survive one more day... you shall be remembered, buddy... along with your six previous incarnations.", "\n\n\n\n\n\n\n\n\nhuh, I still got salt. One of the most ancient staple seasonings to food. Now that's an improvement to my sushi. \n\n *Whoooooosh* \n\n... why do I feel like I just jumped a few milennia?! \n\nToo weird... \n(...probably the echoes of yesterday, though) \n\n Geez, I wonder if I fried my brain for good this time.", "\n\nAnd pepper. Always pepper. It is probably rotten, if pepper could get rotten. Problem is: it doesnt. Hear, hear: this little thing will likely survive all of us. I'll pass. I only keep it for my mother, who was probably the last one that touched the bottle, and that was BEFORE the Covidalypse.\n\nYeah, I just decided that Apocalypse is like, soooo Zombie-season, at least to me. Sooo, for posterity, in order not to confuse the aliens-that-came-to-visit-but-too-late-now-we-already-destroyed-ourselves-congrats-retards or the illustrious Archeologists of the Next Sentient race that will populate this little mudball shooting through the void of space towards-nothing-in-particular, I decided to name it Covidalypse. \n\nMy diary, my rules. You're welcome to go dig another diary as complete as mine in this time and age. Heck, it's all data and bytes now. Fortunately, I and I alone have thought about the plight of future Archeologists and am doing my part. So shut up. Like YOU could come up with a better name, you Alien bastard.","\n\nHmm, half a lemon. Seems fitting... \n\n\n...you know, for adding more drops of sourness into the pool of Misery of my life? \n\n...yeah, yeah, I'm not a great joker, but I'm trying, ok? The stupid world is too gloomy to make jokes anyway, so just pretend my failed attempt of humor was in fact some sarcastic statement, which is more fitting.\n\n What else are you hide in thy Depths, O Fridge of Mine?!", "\n\nIs that a tomato? \n\nOh. Oh. Hm. \n\nShould've guessed. It was way too red to be true. And I don't even remember having a plastic tomato in here. Whatever, at least it adds a little color to the pallete. Perhaps I could fill it with rat poison to kill a burglar that decide to break into my house... \n\n... well probably the thief would rather sell the tomato than eat it, since it might be the most expensive non-broken-and-damaged-repeatedly item inside.","\n\nOh, and there's a plastic bell pepper too. Oh, now I remember these little fellas. Gift from an exposition I went... I guess? I should have just thrown it in the thrash, now the only thing these are useful is to make me more hungry. Like, my mouth SHOULD know better, it's obviously not real food. So stop salivating! NOW!\n\nGood. You know who's the boss here.", "\n\nOh. And a plastic GREEN pepper, too. Yeah, you don`t fool me, green bell pepper. Fruit of the same poisoned tree and all that. Pass." ,"\n\nI really should throw all these bell peppers in the thrash. Now I know why I stuffed these in the hidden compartments. Now I'm wishing I hadn't been so spineless trembling in fear of what my mother would say when she came visit.", "\n\nPalm oil? Hmm, so there's cooking involved...\n\nwoooooooosh\n\n... was that the age-milennia wind blowing again? Well, that's not logic, salt was obviously discovered AFTER fire and cooking.\n\n\nWOOOOOOSHHH\n\nOh. OH. Really?! So that first wind was taking me BACK to the dawn of men and THEN the second one to the discovery of fire?! Is that even a thing, now? \n\n Whatever. What else can I find in the deeper crevasses of my fridge-abyss?", "\n\nAdd coconut milk to the mix.", "\n\nArrange in layers, alternating the aromatics with\nthe fish. Bring to a high heat until it boils.","\n\nLower the heat, cover the pan and cook it\n until the fish is soft to the touch of the fork.\nIT'S READY!!!"]
+    
+    var vectorImages: [String] = ["india 2","peixe","sals","pimenta","limao","tomates","pimentao_vermelhos","pimentao_verdes", "pimentao_amarelos", "oleo de dende", "leitedecoco", "Ativo 2", "moqueca"]
+    
+    override func viewDidLoad() {
+        self.view.backgroundColor = #colorLiteral(red: 0.9714753032, green: 0.9805012345, blue: 0.8598872423, alpha: 1.0)
+        label.font = UIFont(name: "TimesBold", size: 17.5)
+        label.frame = .zero
+        label.numberOfLines = 0
+        label.textAlignment = .natural
+        label.textColor = #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        label.text = vectorText[numberOfScreen]
+        
+        button.addTarget(self, action: #selector(updatesTheNumberOfScreens), for: .touchUpInside)
+        button.setImage(UIImage(named: vectorImages[numberOfScreen]), for: .normal)
+        
+        view.addSubview(label)
+        view.addSubview(button)
+        
+        addConstraints()
+    }
+    
+    func addConstraints(){
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        label.preferredMaxLayoutWidth = 600
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
+    }
+    
+    func updateScreen(){
+        label.text = vectorText[numberOfScreen]
+        button.setImage(UIImage(named:vectorImages[numberOfScreen]), for: .normal)
+    }
+    
+    @objc func updatesTheNumberOfScreens() {
+        if numberOfScreen == 12 {
+            numberOfScreen = 0
+            updateScreen()
+        } 
+        else {
+            numberOfScreen+=1
+            updateScreen()
+        }
+    }
+}
+
+PlaygroundPage.current.liveView = MyViewController()
