@@ -10,19 +10,19 @@ This is a playground made for Apple Swift Challenge 2021.
 4. [Autor](#autor)
 
 ## Código
-Todos os arquivos de código estão na pasta [_main](https://github.com/Gui25Reis/Game-of-Life/tree/master/_main), separados por cada linguagem.
+Todos os arquivos de código estão na pasta [_main](https://github.com/Burguul/The-Covidalypse-Chronicles/blob/main/(ULTIMATE)%20Covidalypse%20Chronicles%20.playgroundbook/Contents/Chapters/Chapter1.playgroundchapter/Pages/My%20Playground.playgroundpage/main.swift).
 
 ## Versões
 |  **OS**  | **Versão** |
 |:---------|:-----------|
-| MacOS**  | [3.0.0](https://github.com/Gui25Reis/Game-of-Life/blob/main/arquivos/Game%20of%20Life%20-%20Swift%20[1.0].zip?raw=true)  |
-| iPad**   | [3.0.0](https://github.com/Gui25Reis/Game-of-Life/blob/main/arquivos/Game%20of%20Life%20-%20Swift%20[1.0].zip?raw=true)  |
-
+| MacOS**   |  [3.0.0](https://github.com/Burguul/The-Covidalypse-Chronicles/archive/refs/heads/main.zip)  |
+ ou iPad**  
+ 
 ** Nesse sistema é usado a plataforma [playgrounds](https://www.apple.com/swift/playgrounds/), basta descompactar e adicionar no playgrounds.
 
 
 ## Licença
-Esse projeto é licenciado por [MIT License](https://github.com/Gui25Reis/Game-of-Life/blob/master/LICENSE).
+Esse projeto é licenciado por [MIT License](https://github.com/Burguul/The-Covidalypse-Chronicles/blob/main/LICENSE).
 
 ## Autor
 <table>
