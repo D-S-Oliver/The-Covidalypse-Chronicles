@@ -1,4 +1,4 @@
-# The Covidalypse: Chronicles
+# The Covidalypse: Chronicles (Ultimate Version)
 
 ![cover](https://i.imgur.com/e54qfiu.jpg)
 
